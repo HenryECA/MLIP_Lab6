@@ -15,11 +15,8 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'Test Step: We run testing tool like pytest here'
 
-                # Add permision
-                chmod +x /home/ecamposa/Lab6/mlip/bin/activate
-
                 # Activate virtual environment
-                source /home/ecamposa/Lab6/mlip/bin/activate
+                source /Lab6/mlip/bin/activate
 
                 # Run pytest inside the virtual environment
                 pytest .
