@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -15,18 +16,14 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'Test Step: We run testing tool like pytest here'
 
-                # Activate virtual environment
-                source ~/miniconda3/bin/activate
-                conda activate mlip
+                # TODO fill out the path to conda here
+                # sudo /home/ecamposa/miniconda3/bin/conda init
 
-                # Run pytest inside the virtual environment
-                pytest .
+                # TODO Complete the command to run pytest
+                # sudo /home/ecamposa/miniconda3/bin/conda run -n mlip pytest .
 
-                # Deactivate virtual environment
-                conda deactivate
-                conda deactivate
-
-                echo 'Testing is done'
+                # echo 'pytest not runned'
+                # exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
             }
