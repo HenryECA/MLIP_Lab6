@@ -16,12 +16,14 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # Activate virtual environment
+                source ~/miniconda3/bin/activate
                 conda activate mlip
 
                 # Run pytest inside the virtual environment
                 pytest .
 
                 # Deactivate virtual environment
+                conda deactivate
                 conda deactivate
 
                 echo 'Testing is done'
