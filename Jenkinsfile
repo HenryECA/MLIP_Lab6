@@ -16,13 +16,13 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # Activate virtual environment
-                source /home/ecamposa/Lab6/mlip/bin/activate
+                conda activate mlip
 
                 # Run pytest inside the virtual environment
                 pytest .
 
                 # Deactivate virtual environment
-                deactivate
+                conda deactivate
 
                 echo 'Testing is done'
                 '''
