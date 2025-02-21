@@ -16,7 +16,7 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # Activate virtual environment
-                source mlip/bin/activate
+                source /home/ecamposa/Lab6/mlip/bin/activate
 
                 # Run pytest inside the virtual environment
                 pytest .
